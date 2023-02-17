@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context reloadable="true">
+
+  <Resource name="jdbc/datasource"
+  auth="Container"
+  type="javax.sql.DataSource"
+  defaultAutoCommit="false"
+  maxActive="50"
+  maxIdle="10"
+  maxWait="10"
+  initialSize="10"
+  driverClassName="org.postgresql.Driver"
+  validationQuery="SELECT 'OK'"
+  testWhileIdle="true"
+  testOnBorrow="true"
+  numTestsPerEvictionRun="5"
+  timeBetweenEvictionRunsMillis="5000"
+  minEvictableIdleTimeMillis="60000"
+  antiJARLocking="false"
+  antiResourceLocking="false"
+  username="postgres"
+  password="gugudada"
+  url="jdbc:postgresql://localhost:5432/ProjetoBank?autoReconect=true"/>
+  
+  <!-- 
+  name: nome do datasource
+  auth: define o tipo de datasource
+  type: tipo do recurso
+  defaultAutoCommit: define se vai dar autocommit ou não 
+  maxActive: define quantas transações ativas vão estar disponiveis
+  maxIdle: define a quantidade de conexões inativas
+  maxWait: define tempo máximo de espera por uma conexão ativa
+  initialSize: define quantas conexões vão ser criadas ao iniciar o servidor
+  driverClassName: define que vamos trabalhar com postgres
+  validationQuery: valida se o banco está funcionando 
+  testWhileIdle: testa as conexões inativas para ver se estão mesmo inativas
+  testOnBorrow: não sei ao certo 
+  numTestsPerEvictionRun: trabalha junto ao testeWhileIdle, dando um certo número de quantidade (5) para testar
+  timeBetweenEvictionRunsMillis: quanto tempo ele demorara para fazer outra validação com o numTestsPerEvictionRun
+  minEvictableIdleTimeMillis: define quanto tempo uma conexão pode ficar inativa
+  antiJARLocking: bloqueia jars externos
+  antiResourceLocking: trabalha junto com o antiJar
+  username: nome do usuário postgres
+  password: senha do posgtgres
+  url: url do banco postgres
+   -->
+</Context>
